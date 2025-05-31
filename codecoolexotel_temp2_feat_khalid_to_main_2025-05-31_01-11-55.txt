@@ -1,0 +1,490 @@
+# Code Review Chunks Guide
+This file is organized into separate chunks for staged review:
+
+1. PR METADATA - Basic information about the pull request
+2. PR DESCRIPTION - Detailed description of changes
+3. ARCHITECTURAL CONTEXT - System architecture and dependencies
+4. COMMIT HISTORY - Recent changes to affected files
+5. TEST CASES - Test cases and execution status
+6. CODE CONTEXT - Related code definitions and dependencies
+7. GIT DIFF - Actual changes made
+8. COMPLETE FILES - Full content of changed files
+9. REVIEW INSTRUCTIONS - Guidelines for code review
+
+Each chunk is separated by: 
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+
+
+### CHUNK: PR METADATA
+# Pull Request Overview
+- PR ID: 4
+- Title: dummycommit
+- Repository: codecoolexotel/temp2
+- Source Branch: feat/khalid
+- Target Branch: main
+- Created/Updated At: 2025-05-31 01:11:55
+
+## Reviewers
+1. Anant Prajapati
+
+
+## Files Changed
+Total files changed: 3
+
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: PR DESCRIPTION
+# Change Description
+## Description
+This PR includes changes to 2 js files and 1 yml files.
+
+### Changed Files
+- server/modules/rendering/asciidoc-core/definition.yml
+- server/modules/rendering/asciidoc-core/renderer.js
+- server/modules/rendering/html-figcaption/renderer.js
+
+### Impact Assessment
+- 🔄 Core functionality changes
+
+
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: ARCHITECTURAL CONTEXT
+# System Architecture Overview
+
+## Package Dependencies
+- fmt
+- runtime
+- github.com/bugsnag/bugsnag-go
+- github.com/fatih/color
+- gopkg.in/AlecAivazis/survey.v1
+- log
+- os/exec
+- github.com/blang/semver
+- github.com/pbnjay/memory
+
+## API Endpoints
+
+## Configuration Files
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.devcontainer/devcontainer.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.editorconfig
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.git/config
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.github/ISSUE_TEMPLATE/config.yml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.vscode/extensions.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.vscode/launch.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/.vscode/settings.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/graph/admin/mail/mail-mutation-save-config.gql
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/graph/admin/mail/mail-query-config.gql
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/graph/admin/theme/theme-query-config.gql
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/static/browserconfig.xml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/static/favicons/browserconfig.xml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/client/static/manifest.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/config.sample.yml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/cypress.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/build/config.yml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/containers/config.yml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/Chart.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/templates/deployment.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/templates/ingress.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/templates/service.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/templates/serviceaccount.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/templates/tests/test-connection.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/helm/values.yaml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/packer/digitalocean.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/dev/search-engines/solr/solrconfig.xml
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/package.json
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/server/core/config.js
+- /Users/abhyuday.tomar/exotel/hackathon/repos/codecoolexotel_temp2/server/helpers/config.js
+
+
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: COMMIT HISTORY
+# Recent Changes History
+
+## File: server/modules/rendering/asciidoc-core/definition.yml
+Recent commits:
+* feat: add asciidoc editor module (#5954) (2022-12-24) by Boris
+  Changed files:
+  - client/components/admin.vue
+  - client/components/editor.vue
+  - client/components/editor/common/cmFold.js
+  - client/components/editor/editor-asciidoc.vue
+  - client/components/editor/editor-markdown.vue
+  - client/components/editor/editor-modal-editorselect.vue
+  - client/static/svg/editor-icon-asciidoc.svg
+  - client/themes/default/scss/app.scss
+  - package.json
+  - server/helpers/page.js
+  - server/models/editors.js
+  - server/modules/editor/asciidoc/definition.yml
+  - server/modules/rendering/asciidoc-core/definition.yml
+  - server/modules/rendering/asciidoc-core/renderer.js
+  - yarn.lock
+
+
+## File: server/modules/rendering/asciidoc-core/renderer.js
+Recent commits:
+* feat: add asciidoc editor module (#5954) (2022-12-24) by Boris
+  Changed files:
+  - client/components/admin.vue
+  - client/components/editor.vue
+  - client/components/editor/common/cmFold.js
+  - client/components/editor/editor-asciidoc.vue
+  - client/components/editor/editor-markdown.vue
+  - client/components/editor/editor-modal-editorselect.vue
+  - client/static/svg/editor-icon-asciidoc.svg
+  - client/themes/default/scss/app.scss
+  - package.json
+  - server/helpers/page.js
+  - server/models/editors.js
+  - server/modules/editor/asciidoc/definition.yml
+  - server/modules/rendering/asciidoc-core/definition.yml
+  - server/modules/rendering/asciidoc-core/renderer.js
+  - yarn.lock
+
+
+## File: server/modules/rendering/html-figcaption/renderer.js
+Recent commits:
+
+
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: TEST CASES
+# Error fetching test cases
+GOOGLE_SHEETS_CREDENTIALS environment variable not set
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: CODE CONTEXT
+# Related Code Definitions
+No additional definitions found
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: GIT DIFF
+# Changes Made
+```diff
+diff --git a/server/modules/rendering/asciidoc-core/definition.yml b/server/modules/rendering/asciidoc-core/definition.yml
+index 8a11eb14d968c25d9347dc048eb6c97eebd3ac16..129e00c19855ff69bf3e9301fdc63d6cd7e5531b 100644
+--- a/server/modules/rendering/asciidoc-core/definition.yml
++++ b/server/modules/rendering/asciidoc-core/definition.yml
+@@ -18,3 +18,15 @@ props:
+       - safe
+       - server
+       - secure
++  enablePlantuml:
++    type: Boolean
++    default: false
++    title: enable plantuml extension
++    hint: 'enable rendering for [plantuml] block'
++    order: 2
++  plantumlServer:
++    type: String
++    default: https://plantuml.requarks.io
++    title: PlantUML Server
++    hint: PlantUML server used for image generation
++    order: 3
+\ No newline at end of file
+diff --git a/server/modules/rendering/asciidoc-core/renderer.js b/server/modules/rendering/asciidoc-core/renderer.js
+index e37217d8758a712874aad8ff2bec450b94b02891..e94aa9a092d0898f4016ad35f58cf4c10637ba8e 100644
+--- a/server/modules/rendering/asciidoc-core/renderer.js
++++ b/server/modules/rendering/asciidoc-core/renderer.js
+@@ -1,8 +1,34 @@
+ const asciidoctor = require('asciidoctor')()
+ const cheerio = require('cheerio')
++const deflateRawSync = require('zlib').deflateRawSync
++
++// asciidoctor.js extensions
++// https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/block-processor/
++
++function plantuml_ext(registry, server) {
++  registry.block(function () {
++    this.named("plantuml");
++    this.onContext(["paragraph", "listing"]);
++    this.process(function (parent, reader) {
++      const lines = reader.getLines();
++      const zippedCode = encode64(
++        deflateRawSync(lines.join("\n")).toString("binary")
++      );
++      return this.createImageBlock(parent, {
++        target: `${server}/svg/${zippedCode}`,
++      });
++    });
++  });
++}
++
+ 
+ module.exports = {
+   async render() {
++    let registry = undefined
++    if(this.config.enablePlantuml && this.config.plantumlServer) {
++        registry = asciidoctor.Extensions.create();
++        plantuml_ext(registry, this.config.plantumlServer);
++    }
+     const html = asciidoctor.convert(this.input, {
+       standalone: false,
+       safe: this.config.safeMode,
+@@ -10,17 +36,67 @@ module.exports = {
+         showtitle: true,
+         icons: 'font'
+       }
++      },
++      extension_registry: registry
+     })
+ 
+     const $ = cheerio.load(html, {
+-      decodeEntities: true
+-    })
++@@ -24,3 +51,58 @@ module.exports = {
++    return $.html()
++  }
++}
+ 
+-    $('pre.highlight > code.language-diagram').each((i, elm) => {
+-      const diagramContent = Buffer.from($(elm).html(), 'base64').toString()
+-      $(elm).parent().replaceWith(`<pre class="diagram">${diagramContent}</div>`)
+-    })
+ 
+-    return $.html()
++function encode64(data) {
++  let r = "";
++  for (let i = 0; i < data.length; i += 3) {
++    if (i + 2 === data.length) {
++      r += append3bytes(data.charCodeAt(i), data.charCodeAt(i + 1), 0);
++    } else if (i + 1 === data.length) {
++      r += append3bytes(data.charCodeAt(i), 0, 0);
++    } else {
++      r += append3bytes(
++        data.charCodeAt(i),
++        data.charCodeAt(i + 1),
++        data.charCodeAt(i + 2)
++      );
++    }
+   }
++  return r;
++}
++
++function append3bytes(b1, b2, b3) {
++  let c1 = b1 >> 2;
++  let c2 = ((b1 & 0x3) << 4) | (b2 >> 4);
++  let c3 = ((b2 & 0xf) << 2) | (b3 >> 6);
++  let c4 = b3 & 0x3f;
++  let r = "";
++  r += encode6bit(c1 & 0x3f);
++  r += encode6bit(c2 & 0x3f);
++  r += encode6bit(c3 & 0x3f);
++  r += encode6bit(c4 & 0x3f);
++  return r;
+ }
++
++function encode6bit(raw) {
++  let b = raw;
++  if (b < 10) {
++    return String.fromCharCode(48 + b);
++  }
++  b -= 10;
++  if (b < 26) {
++    return String.fromCharCode(65 + b);
++  }
++  b -= 26;
++  if (b < 26) {
++    return String.fromCharCode(97 + b);
++  }
++  b -= 26;
++  if (b === 0) {
++    return "-";
++  }
++  if (b === 1) {
++    return "_";
++  }
++  return "?";
++}
+\ No newline at end of file
+diff --git a/server/modules/rendering/html-figcaption/renderer.js b/server/modules/rendering/html-figcaption/renderer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..3894160ca5cf7e7dd5a5719eefa67175f30cc316
+--- /dev/null
++++ b/server/modules/rendering/html-figcaption/renderer.js
+@@ -0,0 +1,66 @@
++/* eslint-disable camelcase */
++module.exports = {
++  init($, config) {
++    // Define which elements can be captioned.
++    // Currently, only <img> is supported,
++    // could be extended to <video>, <audio>,
++    // <iframe>, mermaid elements, etc
++    let figurable_selectors = []
++    if (config.images) figurable_selectors.push('img')
++    let figurable_selector = figurable_selectors.join(', ')
++
++    // Check every paragraph with class caption.
++    // If it contains a figurable element in the
++    // beginning followed by text, the text will be
++    // used as a caption for the figureable.
++    // If the paragraph doesn't start with a figurable
++    // element, but the previous paragraph just contains
++    // a single figureable element, the current
++    // paragraph's text will be used as a caption
++    // for the figurable.
++    $('p.figcaption').each((idx, elm) => {
++      let figurable_elm, caption_elm, replace_elm
++
++      let transform = false
++      elm = $(elm)
++
++      // figurable to be captioned is in the same paragraph
++      if (elm.contents(':first-child').is(figurable_selector)) {
++        figurable_elm = elm.children(figurable_selector)
++        caption_elm = $('<figcaption>')
++          .append(elm.contents())
++        replace_elm = elm
++        transform = true
++
++      // figurable to be captioned is in the paragraph above
++      } else {
++        let prev = elm.prev('p')
++        if (prev.text().trim().length === 0) {
++          figurable_elm = prev.children(figurable_selector)
++          caption_elm = $('<figcaption>')
++            .append(elm.contents())
++          prev.remove()
++          replace_elm = elm
++          transform = true
++        }
++      }
++
++      if (transform) {
++        elm.removeClass('figcaption')
++        let wrapper_elm = $('<div>')
++          .attr('class', elm.attr('class'))
++          .addClass('illustration')
++
++        if (config.enumerate) {
++          caption_elm.prepend(`<label>${config.enumerate_prefix}${idx + 1}: </label>`)
++        }
++
++        let figure = $('<figure>')
++          .append(figurable_elm)
++          .append(caption_elm)
++        wrapper_elm.append(figure)
++        replace_elm.replaceWith(wrapper_elm)
++      }
++    })
++  }
++}
+\ No newline at end of file
+
+```
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: COMPLETE FILES
+# Complete File Contents
+
+### server/modules/rendering/asciidoc-core/definition.yml
+```yml
+key: asciidocCore
+title: Core
+description: Basic Asciidoc Parser
+author: dzruyk (Based on asciidoctor.js renderer)
+input: asciidoc
+output: html
+icon: mdi-sitemap
+enabledDefault: true
+props:
+  safeMode:
+    type: String
+    default: server
+    title: Safe Mode
+    hint: Sets the safe mode to use when parsing content to HTML.
+    order: 1
+    enum:
+      - unsafe
+      - safe
+      - server
+      - secure
+```
+
+### server/modules/rendering/asciidoc-core/renderer.js
+```js
+const asciidoctor = require('asciidoctor')()
+const cheerio = require('cheerio')
+
+module.exports = {
+  async render() {
+    const html = asciidoctor.convert(this.input, {
+      standalone: false,
+      safe: this.config.safeMode,
+      attributes: {
+        showtitle: true,
+        icons: 'font'
+      }
+    })
+
+    const $ = cheerio.load(html, {
+      decodeEntities: true
+    })
+
+    $('pre.highlight > code.language-diagram').each((i, elm) => {
+      const diagramContent = Buffer.from($(elm).html(), 'base64').toString()
+      $(elm).parent().replaceWith(`<pre class="diagram">${diagramContent}</div>`)
+    })
+
+    return $.html()
+  }
+}
+```
+
+### server/modules/rendering/html-figcaption/renderer.js
+```js
+
+```
+
+<<<<<<<<<<<< CHUNK SEPARATOR >>>>>>>>>>>
+### CHUNK: REVIEW INSTRUCTIONS
+# Code Review Guidelines
+
+Please review this code considering the following aspects:
+
+## Primary Focus
+1. Code Correctness
+   - Logic errors
+   - Edge cases
+   - Error handling
+   - Race conditions
+
+2. Code Quality
+   - Best practices
+   - Design patterns
+   - Code organization
+   - Naming conventions
+
+3. Performance
+   - Time complexity
+   - Space complexity
+   - Resource usage
+   - Bottlenecks
+
+4. Security
+   - Input validation
+   - Authentication/Authorization
+   - Data protection
+   - Security best practices
+
+## Secondary Focus
+1. Testing
+   - Test coverage
+   - Test quality
+   - Edge cases covered
+
+2. Documentation
+   - Code comments
+   - API documentation
+   - Usage examples
+
+3. Maintainability
+   - Code duplication
+   - Modularity
+   - Extensibility
+
+4. Breaking Changes
+   - API compatibility
+   - Database schema changes
+   - Configuration changes
+
+Please provide specific, actionable feedback for each issue found, including:
+- Issue description
+- Impact assessment
+- Suggested improvements
+- Code examples where applicable
